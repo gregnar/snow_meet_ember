@@ -14,7 +14,15 @@ Group.reopenClass({
       "id": 2,
       "name": "this good name",
       "description": "this good description",
-      "trips": [3]
+      "trips": [3, 4],
+      "users": [1]
+    },
+    {
+      "id": 1,
+      "name": "this terrible name",
+      "description": "this good description",
+      "trips": [5],
+      "users": [1]
     }
   ]
 });

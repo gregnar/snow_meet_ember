@@ -1,0 +1,7 @@
+<h3>Group: {{name}}</h3>
+
+{{#each trip in trips}}
+  <p>{{#link-to 'trip' trip}}{{trip.name}}{{/link-to}}</p>
+{{/each}}
+
+{{outlet}}
