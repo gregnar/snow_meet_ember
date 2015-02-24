@@ -6,7 +6,8 @@ let User = DS.Model.extend({
   email: DS.attr("string"),
   first_name: DS.attr("string"),
   last_name: DS.attr("string"),
-  password_digest: DS.attr("string")
+  password_digest: DS.attr("string"),
+  groups: DS.hasMany("group", {async: true}) 
 });
 
 User.reopenClass({
@@ -18,7 +19,8 @@ User.reopenClass({
       "email": "IamRealLyFucKiNC00l@example.com",
       "first_name": "Pat",
       "last_name": "Mee",
-      "password_digest": "thisisapassword"
+      "password_digest": "thisisapassword",
+      "groups": [2]
     }
   ]
 });
