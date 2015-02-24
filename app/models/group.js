@@ -11,7 +11,7 @@ let Group = DS.Model.extend({
 Group.reopenClass({
   FIXTURES: [
     {
-      "id": "2",
+      "id": 2,
       "name": "this good name",
       "description": "this good description",
       "trips": [3]

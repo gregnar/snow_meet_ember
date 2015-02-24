@@ -4,8 +4,19 @@
     <p>{{user.twitter_name}}</p>
     <p>{{user.insta_name}}</p>
     <p>{{user.email}}</p>
+
     {{#each group in 'user.groups' }}
       <p>{{group.name}}</p>
+
+      {{#each trip in 'group.trips'}}
+        <p>{{trip.name}}</p>
+
+        {{#each rsvp in 'trip.rsvps'}}
+          <p>{{rsvp.status}}
+
+        {{/each}}
+      {{/each}}
     {{/each}}
+
   </div>
 {{/each}}
