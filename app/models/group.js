@@ -4,7 +4,8 @@ let Group = DS.Model.extend({
   name: DS.attr("string"),
   description: DS.attr("string"),
   admin_id: DS.attr("number"),
-  users: DS.hasMany("user", {async: true})
+  users: DS.hasMany("user", {async: true}),
+  trips: DS.hasMany("trip", {async: true})
 });
 
 Group.reopenClass({
@@ -12,9 +13,10 @@ Group.reopenClass({
     {
       "id": "2",
       "name": "this good name",
-      "description": "this good description"
+      "description": "this good description",
+      "trip": [3]
     }
   ]
-})
+});
 
 export default Group;
