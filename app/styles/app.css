@@ -1,0 +1,13 @@
+.splash {
+  background-image: url('/assets/images/splash.jpg');
+  height: 625px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+
+.title {
+
+}
