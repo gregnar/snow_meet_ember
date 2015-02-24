@@ -11,9 +11,8 @@
       {{#each trip in 'group.trips'}}
         <p>{{trip.name}}</p>
 
-        {{#each rsvp in 'trip.rsvps'}}
-          <p>{{rsvp.status}}
-
+        {{#each rsvps in 'trip.rsvps'}}
+          <p>{{rsvps.status}}</p>
         {{/each}}
       {{/each}}
     {{/each}}

@@ -7,7 +7,8 @@ let User = DS.Model.extend({
   first_name: DS.attr("string"),
   last_name: DS.attr("string"),
   password_digest: DS.attr("string"),
-  groups: DS.hasMany("group", {async: true}) 
+  groups: DS.hasMany("group", {async: true}),
+  rsvps: DS.hasMany("rsvp", {async: true})
 });
 
 User.reopenClass({
