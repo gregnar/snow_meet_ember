@@ -1,0 +1,21 @@
+<h1>Group name: {{name}}</h1>
+
+<div class="note-body">
+  Group Description: {{description}}
+</div>
+
+<h2>Trips</h2>
+{{#each trip in trips}}
+  <p>What: {{trip.name}}</p>
+  <p>Where: {{trip.location}}</p>
+  <p>Leave: {{trip.departure_time}}</p>
+  <p>Return: {{trip.return_time}}</p>
+
+  RSVP:
+
+{{/each}}
+
+<h2>Members</h2>
+{{#each user in users}}
+  <p>{{user.first_name}}  {{user.last_name}}</p>
+{{/each}}
