@@ -1,29 +1,31 @@
 <div class="row">
-  <h3>{{name}}</h3><br>
-
-  <div class="large-3 columns text-center">
-    <div class="panel">
+  <div class="large-3 panel columns">
+    <img src="http://placehold.it/500x500&amp;text=Image">
     <h3>Trips</h3><hr><br>
-      <ul>
-        {{#each trip in trips}}
-          <li>{{#link-to 'trip' trip}}{{trip.name}}{{/link-to}}</li>
-        {{/each}}
-      </ul>
+    <ul>
+      {{#each trip in trips}}
+        <li>{{#link-to 'trip' trip}}{{trip.name}}{{/link-to}}</li>
+      {{/each}}
+    </ul>
+    <div class="row">
+
     </div>
   </div>
-
-  <div class="large-6 columns">
-    {{outlet}}
-  </div>
-
-  <div class="large-3 columns">
+  <div class="large-9 columns">
     <div class="panel">
-      <ul>
-        {{#each user in users}}
-          <li>{{user.first_name}}  {{user.last_name}} </li>
-        {{/each}}
-      </ul>
+      {{outlet}}
+    </div>
+    <div class="row">
+      <div class="lage-12 column">
+        <div class="panel">
+          <h3>{{name}} Members</h3><br>
+          <ul class="inline-list left">
+            {{#each user in users}}
+              <li>{{user.first_name}} {{user.last_name}}</li>
+            {{/each}}
+          </ul><br>
+        </div>
+      </div>
     </div>
   </div>
-
 </div>

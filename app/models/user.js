@@ -15,9 +15,9 @@ User.reopenClass({
   FIXTURES: [
     {
       "id": 1,
-      "twitter_name": "IamRealLyFucKiNC00l",
-      "insta_name": "IamRealLyFucKiNC00l2",
-      "email": "IamRealLyFucKiNC00l@example.com",
+      "twitter_name": "@superCool",
+      "insta_name": "superCool",
+      "email": "superCool@example.com",
       "first_name": "Pat",
       "last_name": "Mee",
       "password_digest": "password",
@@ -25,7 +25,7 @@ User.reopenClass({
     },
     {
       "id": 2,
-      "twitter_name": "McDonalds",
+      "twitter_name": "@McDonalds",
       "insta_name": "Yamhumgry",
       "email": "burger@example.com",
       "first_name": "Bandof",
@@ -35,7 +35,7 @@ User.reopenClass({
     },
     {
       "id": 3,
-      "twitter_name": "inotalk",
+      "twitter_name": "@inotalk",
       "insta_name": "noseeeither",
       "email": "internet@example.com",
       "first_name": "EMANTSRIF",

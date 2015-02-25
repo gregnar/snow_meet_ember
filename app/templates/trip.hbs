@@ -1,8 +1,10 @@
 <div class="row text-center">
-  <div class="panel">
-    <p>{{name}}</p>
+  <div>
+    <h2>{{#link-to 'trips.show' trip}}{{name}}{{/link}}</h2>
     <p>{{location}}</p>
-    <p>{{departure_time}}</p>
-    <p>{{return_time}}</p>
+    <tbody>
+      <td><strong>Leave date:</strong> {{departure_time}}</td>
+      <td><strong>Return date:</strong> {{return_time}}</td>
+    </tbody>
   </div>
 </div>

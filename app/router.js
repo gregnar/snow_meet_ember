@@ -12,6 +12,9 @@ Router.map(function() {
       this.resource('trip', { path: 'trips/:trip_id' });
     });
   });
+  this.resource('trips', function() {
+    this.route('show', {path: '/:trail_id'});
+  });
 });
 
 export default Router;
