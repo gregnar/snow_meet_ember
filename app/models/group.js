@@ -12,17 +12,17 @@ Group.reopenClass({
   FIXTURES: [
     {
       "id": 2,
-      "name": "this good name",
+      "name": "Group A",
       "description": "this good description",
-      "trips": [3, 4],
-      "users": [1]
+      "trips": [1, 3, 4],
+      "users": [1, 2, 3]
     },
     {
       "id": 1,
       "name": "this terrible name",
-      "description": "this good description",
-      "trips": [5],
-      "users": [1]
+      "description": "this better description",
+      "trips": [2],
+      "users": [2, 3]
     }
   ]
 });
