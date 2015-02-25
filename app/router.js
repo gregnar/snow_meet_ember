@@ -7,13 +7,15 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
   this.resource('users', function() {});
+
   this.resource('groups', function() {
     this.resource('group', { path: '/:group_id' }, function() {
       this.resource('trip', { path: 'trips/:trip_id' });
     });
   });
+
   this.resource('trips', function() {
-    this.route('show', {path: '/:trail_id'});
+    this.route('trip', {path: '/:trip_id'});
   });
 });
 

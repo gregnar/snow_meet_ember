@@ -1,10 +1,9 @@
 <div class="row text-center">
-  <div>
-    <h2>{{#link-to 'trips.show' trip}}{{name}}{{/link}}</h2>
+    <h2>{{#link-to 'trips.trip' this}}{{name}}{{/link-to}}</h2>
     <p>{{location}}</p>
     <tbody>
       <td><strong>Leave date:</strong> {{departure_time}}</td>
       <td><strong>Return date:</strong> {{return_time}}</td>
-    </tbody>
-  </div>
+    </tbody><br>
+    <h4>RSVP: YES NO MAYBE</h4>
 </div>
