@@ -1,7 +1,28 @@
-<h3>Group: {{name}}</h3>
-
-{{#each trip in trips}}
-  <p>{{#link-to 'trip' trip}}{{trip.name}}{{/link-to}}</p>
-{{/each}}
-
-{{outlet}}
+<div class="row">
+  <div class="large-3 panel columns">
+    <img src="http://www.enthuzed.com/wp-content/uploads/2012/03/killington_gaper_day_enthuzed.jpg">
+    <h3>Trips</h3><hr><br>
+    <ul>
+      {{#each trip in trips}}
+        <li>{{#link-to 'group.trip' trip}}{{trip.name}}{{/link-to}}</li>
+      {{/each}}
+    </ul>
+  </div>
+  <div class="large-9 columns">
+    <div class="panel">
+      {{outlet}}
+    </div>
+    <div class="row">
+      <div class="lage-12 column">
+        <div class="panel">
+          <h3>{{name}} Members</h3><br>
+          <ul class="inline-list left">
+            {{#each user in users}}
+              <li>{{user.first_name}} {{user.last_name}}</li>
+            {{/each}}
+          </ul><br>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
