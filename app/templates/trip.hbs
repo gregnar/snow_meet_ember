@@ -1,5 +1,6 @@
 <div class="row text-center">
-    <h2>{{#link-to 'trips.trip' this}}{{name}}{{/link-to}}</h2>
+    <h2>{{#link-to 'trip' this}}{{name}}{{/link-to}}</h2>
+    <h2>Back: {{#link-to 'group' group}}{{group.name}}{{/link-to}}</h2>
     <p>{{location}}</p>
     <tbody>
       <td><strong>Leave date:</strong> {{departure_time}}</td>
