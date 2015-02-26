@@ -7,6 +7,7 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
   this.resource('splash', { path: '/'} );
+
   this.resource('users', function() {});
 
   this.resource('group', { path: '/groups/:group_id' }, function() {
