@@ -1,15 +1,21 @@
 .splash {
   background-image: url('/assets/images/splash.jpg');
-  height: 625px;
+  height: 640px;
+  width: 100%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-
 }
 
-.title {
+.logo img{
+  padding-top: 100px;
+  height: 30%;
+  width: 40%;
+}
 
+.register {
+  top: 50%;
 }
 
 .trip-title {
