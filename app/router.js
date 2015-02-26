@@ -14,7 +14,10 @@ Router.map(function() {
     this.route('trip', { path: '/trips/:trip_id' });
   });
 
-  this.route('trip', {path: '/trips/:trip_id'});
+  this.route('trip', {path: '/trips/:trip_id'}, function() {
+    this.resource('tweets', { path: '/tweets' });
+  });
+  this.route('tweet');
 });
 
 export default Router;
