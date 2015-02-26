@@ -18,6 +18,6 @@ Tweet.reopenClass({
     }
   ]
 
-})
+});
 
 export default Tweet;
