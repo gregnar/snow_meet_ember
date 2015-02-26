@@ -8,7 +8,7 @@ var Router = Ember.Router.extend({
 Router.map(function() {
   this.resource('splash', { path: '/'} );
 
-  this.resource('users', function() {});
+  this.route('user', { path: '/users/:user_id'});
 
   this.resource('group', { path: '/groups/:group_id' }, function() {
     this.route('trip', { path: '/trips/:trip_id' });
@@ -17,6 +17,7 @@ Router.map(function() {
   this.route('trip', {path: '/trips/:trip_id'}, function() {
     this.resource('tweets', { path: '/tweets' });
   });
+
   this.route('tweet');
 });
 

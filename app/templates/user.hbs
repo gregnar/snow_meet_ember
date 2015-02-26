@@ -1,19 +1,22 @@
-<div class="row">
-  <div class="small-4 columns small-offset-4">
-    <div class='user'>
-      <p>{{user.id}}</p>
-      <p>{{user.twitter_name}}</p>
-      <p>{{user.insta_name}}</p>
-      <p>{{user.email}}</p>
-      {{#each group in 'user.groups' }}
-        <p>{{group.name}}</p>
-        {{#each trip in 'group.trips'}}
-          <p>{{trip.name}}</p>
-          {{#each rsvps in 'trip.rsvps'}}
-            <p>{{rsvps.status}}</p>
-          {{/each}}
-        {{/each}}
-      {{/each}}
-    </div>
+{{render 'navigation'}}
+
+<div class="row panel">
+  <div class="large-3 columns">
+    <p>{{first_name}} {{last_name}}</p>
+    <p>{{email}}</p>
+    <p>{{twitter_name}}</p>
+    <p>{{insta_name}}</p>
   </div>
+  <div class="large-9 columns">
+
+  </div>
+</div>
+
+<div class="row">
+  {{#each group in groups}}
+    <div class="large-4 columns panel">
+      <h4>{{#link-to 'group' group}}{{group.name}}{{/link-to}}</h4>
+      <p>{{group.description}}</p>
+    </div>
+  {{/each}}
 </div>
