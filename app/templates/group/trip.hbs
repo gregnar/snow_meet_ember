@@ -1,3 +1,18 @@
-<h3>group.trip hbs template</h3>
-
-<h2>{{#link-to 'trip' this}}{{name}}{{/link-to}}</h2>
+<div class="row text-center">
+  <h2>{{#link-to 'trip' this}}{{name}}{{/link-to}}</h2>
+  <p>{{location}}</p>
+  <div>
+    <tbody>
+      <td><strong>Leave date:</strong> {{departure_time}}</td>
+      <td><strong>Return date:</strong> {{return_time}}</td>
+    </tbody><br>
+  </div><br>
+  <div class="large-12 columns">
+    <ul class="inline-list">
+      <li><h4>RSVP:</h4></li>
+      <li><button class="tiny round button primary">Yes</button></li>
+      <li><button class="tiny round button primary">No</button></li>
+      <li><button class="tiny round button primary">Maybe</button></li>
+    </ul>
+  </div>
+</div>
