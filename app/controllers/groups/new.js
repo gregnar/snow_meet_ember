@@ -7,7 +7,7 @@ export default Ember.Controller.extend({
     saveGroup: function () {
       var name        = this.get('name');
       var description = this.get('description');
-      var id = this.get('id');
+      var id          = this.get('id');
 
       this.store.createRecord('group', {
         name: name,
