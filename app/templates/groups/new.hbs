@@ -1,0 +1,18 @@
+<div class="row">
+  <h1>{{name}}</h1>
+  <div>
+    {{description}}
+  </div>
+
+  <div class="panel ">
+    <div class="">
+      <label>Name</label>
+      {{input type="name" value=title class="form-control"}}
+    </div>
+    <div class="">
+      <label>Description</label>
+      {{textarea value=description class="form-control"}}
+    </div>
+  </div>
+  <button class="medium button primary" {{action 'saveGroup'}}>Create Group</button>
+</div>
