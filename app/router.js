@@ -14,7 +14,7 @@ Router.map(function() {
     this.route('trip', { path: '/trips/:trip_id' });
   });
 
-  this.resource('groups', function() {
+  this.route('groups', function() {
     this.route('new');
   });
 
