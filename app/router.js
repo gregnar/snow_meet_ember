@@ -12,6 +12,11 @@ Router.map(function() {
 
   this.resource('group', { path: '/groups/:group_id' }, function() {
     this.route('trip', { path: '/trips/:trip_id' });
+    this.route('new-trip');
+  });
+
+  this.resource('groups', function() {
+    this.route('new');
   });
 
   this.route('trip', {path: '/trips/:trip_id'}, function() {

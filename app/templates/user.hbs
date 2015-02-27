@@ -1,11 +1,12 @@
 {{render 'navigation'}}
 
-<div class="row panel">
+<br><div class="row panel">
   <div class="large-3 columns">
     <p>{{first_name}} {{last_name}}</p>
     <p>{{email}}</p>
     <p>{{twitter_name}}</p>
     <p>{{insta_name}}</p>
+    {{#link-to 'groups.new' class="medium button primary"}}New Group{{/link-to}}
   </div>
   <div class="large-9 columns">
 
