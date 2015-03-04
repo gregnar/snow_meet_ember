@@ -1,101 +1,41 @@
 {{render 'navigation'}}
 
 <br><div class="row">
-  <div class="large-12 columns">
-    <div class="panel">
-      <h2 class="trip-title">{{#link-to 'trip' this}}{{name}}{{/link-to}}</h2>
-        <div class="row">
-          <div class="large-6 columns">
-            <p>{{location}}</p>
-            <p>Back: {{#link-to 'group' group}}{{group.name}}{{/link-to}}</p>
-          </div>
-          <div class="large-6 columns">
-            <tbody>
-              <td><strong>Leave date:</strong> {{departure_time}}</td>
-              <td><strong>Return date:</strong> {{return_time}}</td>
-            </tbody><br>
-            <p>RSVP: YES NO MAYBE</p>
-          </div>
-        </div>
+  <div class="panel">
+    <h2 class="trip-title">{{#link-to 'trip' this}}{{name}}{{/link-to}}</h2><hr/><br>
+    <div class="row">
+      <div class="large-6 columns text-center">
+        <p><strong>Where:</strong> {{location}}</p>
+        <p>{{#link-to 'group' group}}Back to {{group.name}}{{/link-to}}</p>
+      </div>
+      <div class="large-6 columns">
+        <tbody>
+          <td><strong>Leave date:</strong> {{departure_time}}</td>
+          <td><strong>Return date:</strong> {{return_time}}</td>
+        </tbody>
+        <br/><p>RSVP: YES NO MAYBE</p>
       </div>
     </div>
   </div>
 </div>
 
 <div class="row">
-  <div class="large-3 columns ">
-    <div class="">
-      <div class="section-container vertical-nav" data-section data-options="deep_linking: false; one_up: true">
-        <blockquote class="twitter-tweet" lang="en"><p>Guido van Rossum on finding his way&#10;The Python creator n Dropbox engineer reflects on his early days in programming&#10;<a href="https://t.co/tNJ6iYXTTI">https://t.co/tNJ6iYXTTI</a></p>&mdash; Chase van Hekken (@ChasevH) <a href="https://twitter.com/ChasevH/status/512788185143709696">September 19, 2014</a></blockquote>
-        <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <div class="large-5 columns ">
+    <div class="section-container vertical-nav" data-section data-options="deep_linking: false; one_up: true">
+      <blockquote class="twitter-tweet"><p>Guido van Rossum on finding his way&#10;The Python creator n Dropbox engineer reflects on his early days in programming&#10;<a href="https://t.co/tNJ6iYXTTI"> &rarr;Link</a></p>&mdash; Chase van Hekken (@ChasevH) <a href="https://twitter.com/ChasevH/status/512788185143709696">September 19, 2014</a></blockquote>
+      <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-        <blockquote class="twitter-tweet" lang="en"><p>Guido van Rossum on finding his way&#10;The Python creator n Dropbox engineer reflects on his early days in programming&#10;<a href="https://t.co/tNJ6iYXTTI">https://t.co/tNJ6iYXTTI</a></p>&mdash; Chase van Hekken (@ChasevH) <a href="https://twitter.com/ChasevH/status/512788185143709696">September 19, 2014</a></blockquote>
-        <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+      <blockquote class="twitter-tweet"><p>Guido van Rossum on finding his way&#10;The Python creator n Dropbox engineer reflects on his early days in programming&#10;<a href="https://t.co/tNJ6iYXTTI">&rarr;Link</a></p>&mdash; Chase van Hekken (@ChasevH) <a href="https://twitter.com/ChasevH/status/512788185143709696">September 19, 2014</a></blockquote>
+      <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-        <blockquote class="twitter-tweet" lang="en"><p>Guido van Rossum on finding his way&#10;The Python creator n Dropbox engineer reflects on his early days in programming&#10;<a href="https://t.co/tNJ6iYXTTI">https://t.co/tNJ6iYXTTI</a></p>&mdash; Chase van Hekken (@ChasevH) <a href="https://twitter.com/ChasevH/status/512788185143709696">September 19, 2014</a></blockquote>
-        <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-      </div>
+      <blockquote class="twitter-tweet"><p>Guido van Rossum on finding his way&#10;The Python creator n Dropbox engineer reflects on his early days in programming&#10;<a href="https://t.co/tNJ6iYXTTI">&rarr;Link</a></p>&mdash; Chase van Hekken (@ChasevH) <a href="https://twitter.com/ChasevH/status/512788185143709696">September 19, 2014</a></blockquote>
+      <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
   </div>
 
-
-  <div class="large-6 columns">
-    <div class="row">
-      <div class="large-2 columns small-3"><img src="http://placehold.it/80x80&text=[img]"/></div>
-        <div class="large-10 columns">
-          <p><strong>Some Person said:</strong> Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.</p>
-          <ul class="inline-list">
-          <li><a href="">Reply</a></li>
-          <li><a href="">Share</a></li>
-          </ul>
-          <h6>2 Comments</h6>
-          <div class="row">
-          <div class="large-2 columns small-3"><img src="http://placehold.it/50x50&text=[img]"/></div>
-          <div class="large-10 columns"><p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit</p></div>
-          </div>
-          <div class="row">
-          <div class="large-2 columns small-3"><img src="http://placehold.it/50x50&text=[img]"/></div>
-          <div class="large-10 columns"><p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit</p></div>
-        </div>
-      </div>
-    </div>
-
-  <hr/>
-
-  <div class="row">
-  <div class="large-2 columns small-3"><img src="http://placehold.it/80x80&text=[img]"/></div>
-  <div class="large-10 columns">
-  <p><strong>Some Person said:</strong> Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.</p>
-  <ul class="inline-list">
-  <li><a href="">Reply</a></li>
-  <li><a href="">Share</a></li>
-  </ul>
+  <div class="large-7 columns text-center panel">
+    <p><img src="http://www.enthuzed.com/wp-content/uploads/2012/03/killington_gaper_day_enthuzed.jpg"/>
+    this is description</p>
   </div>
-  </div>
-
-  <hr/>
-
-  <div class="row">
-  <div class="large-2 columns small-3"><img src="http://placehold.it/80x80&text=[img]"/></div>
-  <div class="large-10 columns">
-  <p><strong>Some Person said:</strong> Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.</p>
-  <ul class="inline-list">
-  <li><a href="">Reply</a></li>
-  <li><a href="">Share</a></li>
-  </ul>
-  <h6>2 Comments</h6>
-  <div class="row">
-  <div class="large-2 columns small-3"><img src="http://placehold.it/50x50&text=[img]"/></div>
-  <div class="large-10 columns"><p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit</p></div>
-  </div>
-  </div>
-  </div>
-
-  </div>
-
-
-  <aside class="large-3 columns hide-for-small">
-    <p><img src="http://placehold.it/300x440&text=[ad]"/></p>
-    <p><img src="http://placehold.it/300x440&text=[ad]"/></p>
-  </aside>
 </div>
+<hr/>
