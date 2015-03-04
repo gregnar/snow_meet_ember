@@ -5,10 +5,14 @@ var Router = Ember.Router.extend({
   location: config.locationType
 });
 
-Router.map(function() {
-  this.resource('splash', { path: '/'} );
+// this.get('controller').get('target').transitionToRoute('user', user);
 
-  this.route('user', { path: '/users/:user_id'});
+
+Router.map(function() {
+  // this.resource('splash', { path: '/'} );
+  this.route('login', {path: '/'});
+
+  this.resource('user', {path: '/users/:user_id'});
 
   this.resource('group', { path: '/groups/:group_id' }, function() {
     this.route('trip', { path: '/trips/:trip_id' });

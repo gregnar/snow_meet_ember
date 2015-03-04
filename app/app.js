@@ -11,6 +11,18 @@ var App = Ember.Application.extend({
   Resolver: Resolver
 });
 
+App.ready = function() {
+  console.log("app is ready wooo")
+}
+
+Ember.Application.initializer({
+  name: 'login-check',
+  initialize: function(container, application) {
+      window.config = config;
+  }
+});
+
+
 loadInitializers(App, config.modulePrefix);
 
 export default App;
