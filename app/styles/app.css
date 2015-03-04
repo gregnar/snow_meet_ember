@@ -60,3 +60,9 @@ blockquote.twitter-tweet a:hover,
 blockquote.twitter-tweet a:focus {
   text-decoration: underline;
 }
+
+.insta_picture {
+  -moz-box-shadow:    outset 0 0 10px #000000;
+  -webkit-box-shadow: outset 0 0 10px #000000;
+  box-shadow:         outset 0 0 10px #000000;
+}
