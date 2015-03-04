@@ -6,10 +6,21 @@
   </div><br><br>
   <div class="row">
     <div class="register text-center">
-      <ul class="no-bullet">
-        <li><button class="large round button alert">Register</button></li>
-        <li><button class="tiny round button alert">Login</button></li>
-      </ul>
+      <div>
+        {{#if model }}
+          <h1>welcome {{model.first_name}}</h1>
+        {{else}}
+          <form {{action "logIn" on="submit"}}>
+            {{input name="email" value=email}}
+            {{input name="password" value=password}}
+            <button class="btn btn-primary btn-block" type="submit">Log In</button>
+          </form>
+          <ul class="no-bullet">
+            <li><button class="large round button alert">Register</button></li>
+            <li><button class="tiny round button alert">Login</button></li>
+          </ul>
+        {{/if}}
+      </div>
     </div>
   </div>
 </div>
