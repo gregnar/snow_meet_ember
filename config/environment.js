@@ -24,7 +24,8 @@ module.exports = function(environment) {
   };
 
   ENV['simple-auth-devise'] = {
-    resourceName: 'account'
+    resourceName: 'user',
+    identificationAttributeName: 'email'
   };
 
   if (environment === 'development') {

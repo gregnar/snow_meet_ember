@@ -9,3 +9,9 @@ app.import('bower_components/foundation/css/foundation.css');
 // app.import('bower_components/foundation/css/foundation-icons/foundation-icons.css');
 
 module.exports = app.toTree();
+
+app.import('vendor/rails-csrf/dist/named-amd/main.js', {
+  'rails-csrf': [
+    'service'
+  ]
+});
