@@ -7,6 +7,7 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
   this.resource('splash', { path: '/'} );
+  this.route('logout', {path: '/logout'});
 
   this.route('user', { path: '/users/:user_id'});
 

@@ -8,13 +8,12 @@ var SessionController = Ember.ObjectController.extend({
   },
   logIn: function() {
     if(this.token()) {
-      return $.ajax({url: "http://lvh.me:3000/api/v1/sessions.json",
+      this.currentUser = $.ajax({url: "http://lvh.me:3000/api/v1/sessions.json",
                       type: "GET",
                       data: {token: this.token()}}
               ).done(function(data) {
                 console.log("logged in user using token, got data ", data);
-                this.currentUser = data;
-                return data;
+                return data
               }).fail(function(data) {
                 console.log("failed to log in, got data", data);
                 return null;
