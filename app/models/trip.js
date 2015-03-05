@@ -4,9 +4,9 @@ let Trip = DS.Model.extend({
   name: DS.attr("string"),
   city: DS.attr("string"),
   state: DS.attr("string"),
-  departure_time: DS.attr("date"),
-  // admin_id: DS.attr("number"),
-  return_time: DS.attr("date"),
+  group_id: DS.attr("number"),
+  departure_time: DS.attr("string"),
+  return_time: DS.attr("string"),
   group: DS.belongsTo("group", {async: true}),
   rsvps: DS.hasMany("rsvp", {async: true}),
   instagrams: DS.hasMany("instagram", {async: true})
@@ -20,7 +20,7 @@ Trip.reopenClass({
       "location": "because we're awesome",
       "departure_time": "1/1/15",
       "return_time": "2/5/15",
-      "group": 2,
+      "group_id": 2,
       "rsvps": [1],
       "admin_id": 1,
       "instagrams": [1]
@@ -31,7 +31,7 @@ Trip.reopenClass({
       "location": "off a road, there's a bus",
       "departure_time": "3/3/15",
       "return_time": "3/5/15",
-      "group": 1,
+      "group_id": 1,
       "rsvps": [1],
       "admin_id": 1
     },
@@ -41,7 +41,7 @@ Trip.reopenClass({
       "location": "somewhere west of here",
       "departure_time": "1/4/15",
       "return_time": "2/12/15",
-      "group": 2,
+      "group_id": 2,
       "rsvps": [1],
       "admin_id": 2
     },
@@ -51,7 +51,7 @@ Trip.reopenClass({
       "location": "not mars",
       "departure_time": "1/24/15",
       "return_time": "2/1/15",
-      "group": 2,
+      "group_id": 2,
       "rsvps": [1],
       "admin_id": 3
     }
