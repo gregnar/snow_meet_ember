@@ -34,8 +34,12 @@
   </div>
 
   <div class="large-7 columns text-center panel">
-    <p><img src="http://www.enthuzed.com/wp-content/uploads/2012/03/killington_gaper_day_enthuzed.jpg"/>
-    this is description</p>
+  {{#each instagram in instagrams}}
+    <img {{bind-attr src=instagram.image_url}}/>
+    <img {{bind-attr src=instagram.profile_pic}}/>
+    <h1>{{instagram.user_name}}</h1>
+  {{/each}}
   </div>
+
 </div>
 <hr/>
