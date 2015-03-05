@@ -35,6 +35,8 @@
 
   <div class="large-7 columns text-center panel">
   {{#each instagram in instagrams}}
+    <img {{bind-attr src=instagram.image_url}}/>
+    <img {{bind-attr src=instagram.profile_pic}}/>
     <h1>{{instagram.user_name}}</h1>
   {{/each}}
   </div>
