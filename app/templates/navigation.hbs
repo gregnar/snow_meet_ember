@@ -9,6 +9,7 @@
   </ul>
   {{#if controller.currentUser }}
     <a href="#" class="button" data-dropdown="drop">Welcome, {{controller.currentUser.first_name}}</a>
+    {{link-to "logout" "logout"}}
   {{else}}
     <a href="#" class="button" data-dropdown="drop">Sign In</a>
   {{/if}}
