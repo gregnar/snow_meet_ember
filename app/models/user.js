@@ -12,6 +12,12 @@ let User = DS.Model.extend({
 });
 
 User.reopenClass({
+  find_by_email: function (desired_email) {
+    return this.store.find('user', { email: desired_email });
+  },
+});
+
+User.reopenClass({
   FIXTURES: [
     {
       "id": 1,
