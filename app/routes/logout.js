@@ -2,8 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
     model: function() {
-      console.log("Got Logout Model hook");
-      $.removeCookie('authToken');
+      $.removeCookie("authToken", {path: "/"});
       this.transitionTo("splash");
     }
 });
