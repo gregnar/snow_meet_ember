@@ -21,11 +21,7 @@ Router.map(function() {
     this.route('new');
   });
 
-  this.route('trip', {path: '/trips/:trip_id'}, function() {
-    this.resource('tweets', { path: '/tweets' });
-  });
-
-  this.route('tweet');
+  this.route('trip', {path: '/trips/:trip_id'});
 });
 
 export default Router;

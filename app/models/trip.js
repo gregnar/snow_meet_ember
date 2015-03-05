@@ -2,12 +2,14 @@ import DS from 'ember-data';
 
 let Trip = DS.Model.extend({
   name: DS.attr("string"),
-  location: DS.attr("string"),
+  city: DS.attr("string"),
+  state: DS.attr("string"),
   departure_time: DS.attr("date"),
-  admin_id: DS.attr("number"),
+  // admin_id: DS.attr("number"),
   return_time: DS.attr("date"),
   group: DS.belongsTo("group", {async: true}),
-  rsvps: DS.hasMany("rsvp", {async: true})
+  rsvps: DS.hasMany("rsvp", {async: true}),
+  instagrams: DS.hasMany("instagram", {async: true})
 });
 
 Trip.reopenClass({
@@ -20,7 +22,8 @@ Trip.reopenClass({
       "return_time": "2/5/15",
       "group": 2,
       "rsvps": [1],
-      "admin_id": 1
+      "admin_id": 1,
+      "instagrams": [1]
     },
     {
       "id": 2,
