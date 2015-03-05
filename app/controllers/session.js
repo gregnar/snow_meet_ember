@@ -18,6 +18,7 @@ var SessionController = Ember.ObjectController.extend({
                 console.log("failed to log in, got data", data);
                 return null;
               });
+      return this.currentUser;
     } else {
       return null;
     }
