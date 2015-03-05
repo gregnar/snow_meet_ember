@@ -1,10 +1,6 @@
 import Ember from 'ember';
 
 var SplashController = Ember.ObjectController.extend({
-  model: function() {
-    console.log("splash controller model hook");
-    return this.currentUser();
-  },
   actions: {
     logIn: function() {
       var controller = this;
@@ -21,17 +17,6 @@ var SplashController = Ember.ObjectController.extend({
   },
   token: function() {
     return $.cookie("authToken");
-  },
-  currentUser: function() {
-    if(this.get('user')) {
-      return this.get('user');
-    } else {
-      if(this.token()) {
-        return this.fetchUser();
-      } else {
-        //show login screen or something??
-      }
-    }
   },
   password: "pizza",
   email: "horace@turing.io"
