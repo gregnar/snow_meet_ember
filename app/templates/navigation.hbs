@@ -7,9 +7,8 @@
   <ul class="left">
     {{link-to group 'group'}}
   </ul>
-  {{controllers.session.currentUser}}
-  {{#if currentUser }}
-    <a href="#" class="button" data-dropdown="drop">Welcome, {{currentUser.first_name}}</a>
+  {{#if controller.currentUser }}
+    <a href="#" class="button" data-dropdown="drop">Welcome, {{controller.currentUser.first_name}}</a>
   {{else}}
     <a href="#" class="button" data-dropdown="drop">Sign In</a>
   {{/if}}

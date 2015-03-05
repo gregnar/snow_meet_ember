@@ -1,24 +1,20 @@
 var SessionController = Ember.ObjectController.extend({
   init: function() {
-    console.log("session cont init");
     this.logIn();
-  },
-  setupController: function(controller, model) {
-    console.log("setting up session cotnroller");
   },
   logIn: function() {
     if(this.token()) {
-      this.currentUser = $.ajax({url: "http://lvh.me:3000/api/v1/sessions.json",
-                      type: "GET",
-                      data: {token: this.token()}}
-              ).done(function(data) {
-                console.log("logged in user using token, got data ", data);
-                return data
-              }).fail(function(data) {
-                console.log("failed to log in, got data", data);
-                return null;
-              });
-      return this.currentUser;
+      var controller = this;
+      this.currentUser = this.get("store").createRecord("user", {first_name: "Placeholder"});
+      $.ajax({url: "http://lvh.me:3000/api/v1/sessions.json",
+              type: "GET",
+              data: {token: this.token()}}
+      ).done(function(data) {
+        controller.currentUser.setProperties(data);
+      }).fail(function(data) {
+        controller.currentUser = null
+        return null;
+      });
     } else {
       return null;
     }
