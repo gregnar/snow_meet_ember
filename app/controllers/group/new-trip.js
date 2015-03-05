@@ -6,14 +6,17 @@ export default Ember.Controller.extend({
     saveTrip: function () {
       var name     = this.get('name');
       var id       = this.get('id');
-      var location = this.get('location');
-      var group    = this.get('group');
+      var city     = this.get('city');
+      var state    = this.get('state');
+      var group    = this.get('group_id');
+      console.log(group)
       var return_time    = this.get('return_time');
       var departure_time = this.get('departure_time');
 
       this.store.createRecord('trip', {
         name: name,
-        location: location,
+        city: city,
+        state: state,
         id: id,
         group: group,
         return_time: return_time ,
