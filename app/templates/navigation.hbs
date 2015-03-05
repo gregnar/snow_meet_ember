@@ -8,8 +8,9 @@
     {{link-to group 'group'}}
   </ul>
   {{#if controller.currentUser }}
-    <a href="#" class="button" data-dropdown="drop">Welcome, {{controller.currentUser.first_name}}</a>
-    {{link-to "logout" "logout"}}
+    <strong>Welcome, {{controller.currentUser.first_name}}</strong>
+    {{link-to "Logout" "logout"}} --
+    {{#link-to 'user' controller.currentUser.id}}Your Profile{{/link-to}}
   {{else}}
     <a href="#" class="button" data-dropdown="drop">Sign In</a>
   {{/if}}
