@@ -9,7 +9,6 @@ export default Ember.Controller.extend({
       var city     = this.get('city');
       var state    = this.get('state');
       var group    = this.get('group_id');
-      console.log(group)
       var return_time    = this.get('return_time');
       var departure_time = this.get('departure_time');
 

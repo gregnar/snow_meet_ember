@@ -6,9 +6,15 @@ let User = DS.Model.extend({
   email: DS.attr("string"),
   first_name: DS.attr("string"),
   last_name: DS.attr("string"),
-  password_digest: DS.attr("string"),
+  // password_digest: DS.attr("string"),
   groups: DS.hasMany("group", {async: true}),
   rsvps: DS.hasMany("rsvp", {async: true})
+});
+
+User.reopenClass({
+  find_by_email: function (desired_email) {
+    return this.store.find('user', { email: desired_email });
+  },
 });
 
 User.reopenClass({

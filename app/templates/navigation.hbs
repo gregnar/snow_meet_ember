@@ -8,7 +8,11 @@
   {{link-to group 'group'}}
   </ul>
   <ul class="right">
-    <a href="#" class="button" data-dropdown="drop">Sign In</a>
+    {{#if session.isAuthenticated}}
+      <a {{ action 'invalidateSession' }}>Logout</a>
+    {{else}}
+      {{#link-to 'login'}}Login{{/link-to}}
+    {{/if}}
      <ul id="drop" class="[tiny small medium large content] f-dropdown" data-dropdown-content>
         <li><a href="#">This is a link</a></li>
         <li><a href="#">This is another</a></li>
