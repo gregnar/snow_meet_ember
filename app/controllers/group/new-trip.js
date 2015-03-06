@@ -20,7 +20,7 @@ export default Ember.Controller.extend({
         departure_time: departure_time
       });
 
-      var group    = this.get('model');
+      var group = this.get('model');
       new_trip.set('group', group);
 
       new_trip.save().then(function (trip) {
