@@ -35,7 +35,7 @@
     "ember-export-application-global": "^1.0.2",
     "ember-foundation": "^0.3.0",
     "express": "^4.8.5",
-    "glob": "^4.0.5"
+    "glob": "^4.4.2"
   },
   "dependencies": {
     "rails-csrf": "^1.0.1"
