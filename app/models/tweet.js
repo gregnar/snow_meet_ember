@@ -7,17 +7,5 @@ let Tweet = DS.Model.extend({
   user: DS.belongsTo("user", {async: true}),
 });
 
-Tweet.reopenClass({
-  FIXTURES: [
-    {
-      "id": 1,
-      "user_name": "j3",
-      "created_at": "1/1/15",
-      "text": "Hey guys check out this awesome job you're not gonna get",
-      "user": 1,
-    }
-  ]
-
-});
 
 export default Tweet;
