@@ -8,6 +8,8 @@ var Router = Ember.Router.extend({
 Router.map(function() {
   this.resource('splash', { path: '/'} );
 
+  this.route('login', { path: '/login' });
+
   this.route('user', { path: '/users/:user_id'});
 
   this.resource('group', { path: '/groups/:group_id' }, function() {
