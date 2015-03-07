@@ -5,7 +5,6 @@ export default Ember.Controller.extend({
 
     saveTrip: function () {
       var name     = this.get('name');
-      var id       = this.get('id');
       var city     = this.get('city');
       var state    = this.get('state');
       var return_time    = this.get('return_time');
@@ -15,7 +14,6 @@ export default Ember.Controller.extend({
         name: name,
         city: city,
         state: state,
-        id: id,
         return_time: return_time ,
         departure_time: departure_time
       });
