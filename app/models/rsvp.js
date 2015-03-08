@@ -8,15 +8,4 @@ let RSVP = DS.Model.extend({
   trip: DS.belongsTo("trip", {async: true})
 });
 
-RSVP.reopenClass({
-  FIXTURES: [
-    {
-      "id": 1,
-      "trip_id": 3,
-      "user_id": 1,
-      "status": "yes"
-    }
-  ]
-});
-
 export default RSVP;

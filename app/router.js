@@ -10,15 +10,13 @@ Router.map(function() {
 
   this.route('login', { path: '/login' });
 
-  this.route('user', { path: '/users/:user_id'});
+  this.resource('user', { path: '/users/:user_id'}, function() {
+    this.route('new-group');
+  });
 
   this.resource('group', { path: '/groups/:group_id' }, function() {
     this.route('trip', { path: '/trips/:trip_id' });
     this.route('new-trip');
-  });
-
-  this.resource('groups', function() {
-    this.route('new');
   });
 
   this.route('trip', {path: '/trips/:trip_id'});
