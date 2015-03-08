@@ -9,21 +9,20 @@ export default Ember.Controller.extend({
       var email        = this.get('email');
       var insta_name   = this.get('insta_name');
       var twitter_name = this.get('twitter_name');
-      var password              = this.get('password');
+      var password     = this.get('password');
       var password_confirmation = this.get('password_confirmation');
 
       var new_user = this.store.createRecord('user', {
-        first_name: first_name,
-        last_name: last_name,
         email: email,
-        password_confirmation: password_confirmation,
         password: password,
+        last_name: last_name,
         insta_name: insta_name,
+        first_name: first_name,
         twitter_name: twitter_name,
        });
 
       new_user.save().then(function (user) {
-        this.transitionToRoute('user', user);
+        this.transitionTo('user', user);
       }.bind(this));
     }
   }
