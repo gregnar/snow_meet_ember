@@ -5,7 +5,6 @@ let Trip = DS.Model.extend({
   city: DS.attr("string"),
   state: DS.attr("string"),
   departure_time: DS.attr("date"),
-  // admin_id: DS.attr("number"),
   return_time: DS.attr("date"),
   group: DS.belongsTo("group", {async: true}),
   rsvps: DS.hasMany("rsvp", {async: true}),
