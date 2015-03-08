@@ -25,11 +25,11 @@
      {{#each tweet in tweets}}
         <blockquote class="twitter-tweet">
           <p>
-            {{text}}
+            {{tweet.text}}
             <a href="https://t.co/tNJ6iYXTTI"> &rarr;Link</a>
           </p>
-            &mdash;{{user_name}}
-              <a href="https://twitter.com/ChasevH/status/512788185143709696">{{twitter_time}}
+            &mdash;{{tweet.user_name}}
+              <a href="https://twitter.com/ChasevH/status/512788185143709696">{{tweet.twitter_time}}
             </a>
           </blockquote>
         <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>

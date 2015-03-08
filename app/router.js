@@ -23,7 +23,9 @@ Router.map(function() {
     this.route('new-trip');
   });
 
-  this.route('trip', {path: '/trips/:trip_id'});
+  this.route('trip', { path: '/trips/:trip_id' }, function(){
+    this.resource('tweets');
+  });
 });
 
 export default Router;
