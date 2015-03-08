@@ -1,19 +1,18 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-
   actions: {
 
     saveGroup: function () {
-      var name        = this.get('name');
-      var description = this.get('description');
-      var id          = this.get('id');
+      var name              = this.get('name');
+      var description       = this.get('description');
 
-      this.store.createRecord('group', {
+      var new_group = this.store.createRecord('group', {
         name: name,
         description: description,
-        id: id
-      }).save().then(function (group) {
+       });
+
+      new_group.save().then(function (group) {
         this.transitionToRoute('group', group);
       }.bind(this));
     }

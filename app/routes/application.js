@@ -1,15 +1,13 @@
 import Ember from 'ember';
-import ApplicationRouteMixin from 'simple-auth/mixins/application-route-mixin';
+import SimpleAuthApplicationRouteMixin from 'simple-auth/mixins/application-route-mixin';
 
 
-export default Ember.Route.extend(ApplicationRouteMixin, {
+export default Ember.Route.extend(SimpleAuthApplicationRouteMixin, {
 
   beforeModel: function() {
-      return this.csrf.fetchToken();
-    },
+    this._super();
+    return this.csrf.fetchToken();
+  },
 
-  sessionAuthenticationSucceeded: function () {
-    this.transitionTo("user");
-  }
 
 });

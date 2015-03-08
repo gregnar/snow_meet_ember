@@ -1,5 +1,3 @@
-{{render 'navigation'}}
-<br>
 <div class="row">
   <div>
     {{name}}
@@ -14,9 +12,8 @@
     <div class="">
       <label>Description</label>
       {{textarea value=description class="form-control"}}
-      <label>id</label>
-      {{input value=id class="form-control"}}
     </div>
   </div>
   <button class="medium button primary" {{action 'saveGroup'}}>Create Group</button>
 </div>
+

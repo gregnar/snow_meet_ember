@@ -6,7 +6,7 @@
     <p>{{email}}</p>
     <p>{{twitter_name}}</p>
     <p>{{insta_name}}</p>
-    {{#link-to 'groups.new' class="medium button primary"}}New Group{{/link-to}}
+    {{#link-to 'user.new-group' class="tiny round button info"}}New Group{{/link-to}}
   </div>
   <div class="large-9 columns">
 
@@ -20,4 +20,8 @@
       <p>{{group.description}}</p>
     </div>
   {{/each}}
+</div>
+
+<div class="panel">
+  {{outlet}}
 </div>

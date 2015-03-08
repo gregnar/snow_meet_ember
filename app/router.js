@@ -6,22 +6,27 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.resource('splash', { path: '/'} );
+  this.resource('splash', { path: '/'});
+
+  this.route('new-user', { path: '/users/new' });
 
   this.route('login', { path: '/login' });
 
-  this.route('user', { path: '/users/:user_id'});
+  this.route('index', { path: '/index' });
+
+  this.resource('user', { path: '/users/:user_id'}, function() {
+    this.route('new-group');
+  });
 
   this.resource('group', { path: '/groups/:group_id' }, function() {
     this.route('trip', { path: '/trips/:trip_id' });
     this.route('new-trip');
   });
 
-  this.resource('groups', function() {
-    this.route('new');
+  this.route('trip', { path: '/trips/:trip_id' }, function(){
+    this.resource('tweets');
+    this.resource('instagrams');
   });
-
-  this.route('trip', {path: '/trips/:trip_id'});
 });
 
 export default Router;

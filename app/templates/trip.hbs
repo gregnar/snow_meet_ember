@@ -22,14 +22,19 @@
 <div class="row">
   <div class="large-5 columns ">
     <div class="section-container vertical-nav" data-section data-options="deep_linking: false; one_up: true">
-      <blockquote class="twitter-tweet"><p>Guido van Rossum on finding his way&#10;The Python creator n Dropbox engineer reflects on his early days in programming&#10;<a href="https://t.co/tNJ6iYXTTI"> &rarr;Link</a></p>&mdash; Chase van Hekken (@ChasevH) <a href="https://twitter.com/ChasevH/status/512788185143709696">September 19, 2014</a></blockquote>
-      <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+     {{#each tweet in tweets}}
+        <blockquote class="twitter-tweet">
+          <p>
+            {{tweet.text}}
+            <a href="https://t.co/tNJ6iYXTTI"> &rarr;Link</a>
+          </p>
+            &mdash;{{tweet.user_name}}
+              <a href="https://twitter.com/ChasevH/status/512788185143709696">{{tweet.twitter_time}}
+            </a>
+          </blockquote>
+        <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+      {{/each}}
 
-      <blockquote class="twitter-tweet"><p>Guido van Rossum on finding his way&#10;The Python creator n Dropbox engineer reflects on his early days in programming&#10;<a href="https://t.co/tNJ6iYXTTI">&rarr;Link</a></p>&mdash; Chase van Hekken (@ChasevH) <a href="https://twitter.com/ChasevH/status/512788185143709696">September 19, 2014</a></blockquote>
-      <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-      <blockquote class="twitter-tweet"><p>Guido van Rossum on finding his way&#10;The Python creator n Dropbox engineer reflects on his early days in programming&#10;<a href="https://t.co/tNJ6iYXTTI">&rarr;Link</a></p>&mdash; Chase van Hekken (@ChasevH) <a href="https://twitter.com/ChasevH/status/512788185143709696">September 19, 2014</a></blockquote>
-      <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
   </div>
 
