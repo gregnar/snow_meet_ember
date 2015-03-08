@@ -5,7 +5,7 @@ import SimpleAuthApplicationRouteMixin from 'simple-auth/mixins/application-rout
 export default Ember.Route.extend(SimpleAuthApplicationRouteMixin, {
 
   beforeModel: function() {
-    this._super()
+    this._super();
     return this.csrf.fetchToken();
   },
 
