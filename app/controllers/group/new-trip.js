@@ -26,20 +26,4 @@ export default Ember.Controller.extend({
       }.bind(this));
     }
   }
-
 });
-
-
-      // var post = this.store.createRecord('post', {
-      //   title: 'Rails is Omakase',
-      //   body: 'Lorem ipsum'
-      // });
-
-      // this.store.find('user', 1).then(function(user) {
-      //   post.set('author', user);
-      // });
-
-      // debugger;
-
-            // new_trip.set('group', group.id);
-            // new_trip.set('group.id', null);
