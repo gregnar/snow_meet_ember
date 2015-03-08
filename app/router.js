@@ -6,11 +6,13 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.resource('splash', { path: '/'} );
+  this.resource('splash', { path: '/'})
+
+  this.route('new-user', { path: '/users/new' });
 
   this.route('login', { path: '/login' });
 
-  this.route('index', { path: '/index' } );
+  this.route('index', { path: '/index' });
 
   this.resource('user', { path: '/users/:user_id'}, function() {
     this.route('new-group');

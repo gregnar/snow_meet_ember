@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="panel ">
+    <div class="">
+      <label>First Name</label>
+      {{textarea value=first_name class="form-control"}}
+      <label>Last Name</label>
+      {{textarea value=last_name class="form-control"}}
+      <label>Email</label>
+      {{textarea value=email class="form-control"}}
+      <label>Password</label>
+      {{textarea value=password class="form-control"}}
+      <label>Instagram Name</label>
+      {{textarea value=insta_name class="form-control"}}
+      <label>Twitter Name</label>
+      {{textarea value=twitter_name class="form-control"}}
+    </div>
+  </div>
+  <button class="medium button primary" {{action 'saveUser'}}>Create User</button>
+</div>
+
