@@ -25,6 +25,7 @@ Router.map(function() {
 
   this.route('trip', { path: '/trips/:trip_id' }, function(){
     this.resource('tweets');
+    this.resource('instagrams');
   });
 });
 
