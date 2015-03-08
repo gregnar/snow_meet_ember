@@ -10,6 +10,8 @@ Router.map(function() {
 
   this.route('login', { path: '/login' });
 
+  this.route('index', { path: '/index' } );
+
   this.resource('user', { path: '/users/:user_id'}, function() {
     this.route('new-group');
   });
