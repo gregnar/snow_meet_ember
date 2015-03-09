@@ -34,17 +34,26 @@
           </blockquote>
         <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
       {{/each}}
-
     </div>
   </div>
 
-  <div class="large-7 columns text-center panel">
-  {{#each instagram in instagrams}}
-    <img {{bind-attr src=instagram.image_url}}/>
-    <img {{bind-attr src=instagram.profile_pic}}/>
-    <h1>{{instagram.user_name}}</h1>
-  {{/each}}
+  <div class="large-7 columns panel">
+    <div class="row">
+    {{#each instagram in instagrams}}
+      <div class="large-6 columns insta-pro-pic">
+        <img {{bind-attr src=instagram.profile_pic}}/>
+      </div>
+      <div class="large-6 columns insta-name">
+        <h3>{{instagram.user_name}} :</h3>
+      </div>
+      <div class="insta-pic">
+        <img {{bind-attr src=instagram.image_url}}/>
+      </div><br>
+      <div class="insta-caption">
+        {{instagram.caption}}
+      </div><hr/>
+    {{/each}}
+    </div>
   </div>
-
 </div>
 <hr/>
