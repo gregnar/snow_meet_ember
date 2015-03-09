@@ -10,7 +10,7 @@ export default Ember.Controller.extend({
       var new_group = this.store.createRecord('group', {
         name: name,
         description: description,
-       });
+      });
 
       new_group.save().then(function (group) {
         this.transitionToRoute('group', group);

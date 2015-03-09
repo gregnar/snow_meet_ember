@@ -1,10 +1,13 @@
 {{render 'navigation'}}
 
+<h1>{{content.name}}</h1>
+
 <div class="row">
   <br><div class="large-3 panel columns">
     <img src="http://www.enthuzed.com/wp-content/uploads/2012/03/killington_gaper_day_enthuzed.jpg">
     <h3>Trips</h3>
       {{#link-to 'group.new-trip' class="tiny round button info"}}New Trip{{/link-to}}
+      <button class="tiny round button info" {{action 'addUser'}}>Join Group</button>
     <hr><br>
     <ul>
       {{#each trip in trips}}
